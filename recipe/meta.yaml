@@ -1,5 +1,5 @@
 {% set name = "fixit" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fixit-{{ version }}.tar.gz
-  sha256: b31665cb6491d659d8dfef5a6078a7e9f786e299826636d03d6bd91b6f71e95b
+  sha256: ad22aea501f332eb46a316a1d409c384fd6f1e9fb5df7e89a0a74603814d8935
 
 build:
   entry_points:
     - fixit = fixit.cli:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - click >=8.0
+    - click >=8.0,<8.2
     - libcst >=0.3.18
     - moreorless >=0.4.0
     - packaging >=21
