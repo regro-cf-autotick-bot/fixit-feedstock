@@ -1,5 +1,5 @@
 {% set name = "fixit" %}
-{% set version = "2.2.0" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fixit-{{ version }}.tar.gz
-  sha256: ad22aea501f332eb46a316a1d409c384fd6f1e9fb5df7e89a0a74603814d8935
+  sha256: 98f7e30be083b4002fde8da47ae6d817e4dd174f675b848577d3a4f6e0c84954
 
 build:
   entry_points:
